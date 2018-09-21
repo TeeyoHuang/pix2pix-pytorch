@@ -47,13 +47,13 @@ def Get_dataloader(args):
                 transforms.ToTensor(),
                 transforms.Normalize((0.5,0.5,0.5), (0.5,0.5,0.5)) ]
 
-    train_dataloader = DataLoader(ImageDataset(args, "../../data/%s" % args.dataset_name, transforms_=transforms_,mode='train'),
+    train_dataloader = DataLoader(ImageDataset(args, "%s/%s" % (args.data_root,args.dataset_name), transforms_=transforms_,mode='train'),
                         batch_size=args.batch_size, shuffle=True, num_workers=args.n_cpu, drop_last=True)
 
-    test_dataloader = DataLoader(ImageDataset(args, "../../data/%s" % args.dataset_name, transforms_=transforms_, mode='test'),
+    test_dataloader = DataLoader(ImageDataset(args, "%s/%s" % (args.data_root,args.dataset_name), transforms_=transforms_, mode='test'),
                             batch_size=10, shuffle=True, num_workers=1, drop_last=True)
 
-    val_dataloader = DataLoader(ImageDataset(args, "../../data/%s" % args.dataset_name, transforms_=transforms_, mode='val'),
+    val_dataloader = DataLoader(ImageDataset(args, "%s/%s" % (args.data_root,args.dataset_name), transforms_=transforms_, mode='val'),
                             batch_size=10, shuffle=True, num_workers=1, drop_last=True)
 
     return train_dataloader, test_dataloader, val_dataloader
