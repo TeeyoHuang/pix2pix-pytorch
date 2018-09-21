@@ -13,7 +13,7 @@ bash ./datasets/download_pix2pix_dataset.sh facades
 ``` 
 ## Train a model:  
 ```
-python pix2pix_train.py --dataroot 'your data directory' --which_direction "BtoA"  
+python pix2pix_train.py --data_root 'your data directory' --which_direction "BtoA"  
 ```
 
 ## Result examples  
