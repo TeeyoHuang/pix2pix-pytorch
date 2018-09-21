@@ -17,6 +17,12 @@ python pix2pix_train.py --data_root 'your data directory' --which_direction "Bto
 ```
 
 ## Result examples  
+### epoch-0  
+![image](https://github.com/TeeyoHuang/pix2pix-pytorch/blob/master/result/0.png)   
+### epoch-99   
+![image](https://github.com/TeeyoHuang/pix2pix-pytorch/blob/master/result/99.png)   
+### epoch-199   
+![image](https://github.com/TeeyoHuang/pix2pix-pytorch/blob/master/result/199.png)   
 
 
 ## Reference  
