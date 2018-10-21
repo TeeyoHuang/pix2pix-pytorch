@@ -20,7 +20,7 @@ from utils import sample_images , LambdaLR
 #load the args
 args = TrainOptions().parse()
 # Calculate output of image discriminator (PatchGAN)
-D_out_size = 256//(2**args.n_D_layers * 4)
+D_out_size = 256//(2**args.n_D_layers) - 2
 print(D_out_size)
 patch = (1, D_out_size, D_out_size)
 
