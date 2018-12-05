@@ -9,7 +9,7 @@ the pytorch version of pix2pix
 ## Datasets 
 - Download a pix2pix dataset (e.g.facades):  
 ```bash
-bash ./download_pix2pix_dataset.sh facades
+bash ./datasets/download_pix2pix_dataset.sh facades
 ``` 
 ## Train a model:  
 ```
