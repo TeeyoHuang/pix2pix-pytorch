@@ -51,9 +51,9 @@ def Get_dataloader(args):
                         batch_size=args.batch_size, shuffle=True, num_workers=args.n_cpu, drop_last=True)
 
     test_dataloader = DataLoader(ImageDataset(args, "%s/%s" % (args.data_root,args.dataset_name), transforms_=transforms_, mode='test'),
-                            batch_size=10, shuffle=True, num_workers=1, drop_last=True)
+                            batch_size=1, shuffle=True, num_workers=1, drop_last=True)
 
     val_dataloader = DataLoader(ImageDataset(args, "%s/%s" % (args.data_root,args.dataset_name), transforms_=transforms_, mode='val'),
-                            batch_size=10, shuffle=True, num_workers=1, drop_last=True)
+                            batch_size=1, shuffle=True, num_workers=1, drop_last=True)
 
     return train_dataloader, test_dataloader, val_dataloader
